@@ -32,11 +32,15 @@ GIS stands for either Geographic Information System or Geographic Information Sc
 
 "Geographic Information Science" is the framework we use to ask questions about the spatial relationship between data. This framework is broader than working within certain GIS-specific softwares like QGIS. You will also hear people use the phrase "Geospatial Science."
 
-Why is location information important? The knowlege gained by spatial data enhances our understanding. For example, we may assume that our friend who lives in the city/county of Denver has easy access to a LOT of good restaurants because the numbers say the ratio of restaurants to the area of the county is high. But when we map out that many restaurants are downtown and realize our friend lives out by Denver International Airport, we have a different perspective.
+Why is location information important? The knowlege gained by spatial data enhances our understanding.
 
-<img src="DenverDIA.png" alt="DenverDIA" width="200"/>
+For example, we may assume that our friend who lives in the city/county of Denver has easy access to a LOT of good restaurants because we know the county has many. But when we map out that most restaurants are downtown and realize our friend lives way out by Denver International Airport, we have a different perspective:
 
-In addition, humans are largely visual. We respond well to seeing information presented in graphs and maps. By using GIS software, we can share our message quickly by *carefully* presenting it in the form of a map. (**How** we show our data on a map will change our message, but that's for a different workshop.)
+<p align="center">
+<img src="images/DenverDIA.png" width="700"/>
+</p>
+
+In addition, humans are largely visual. We respond well to seeing information presented in graphs and maps. By using GIS software, we can share our message quickly by *carefully* presenting it in the form of a map. In the above example, we could spend some time explaining that Denver has an odd stretched out boundary to accommodate placing the airport out east or we can just show it to get the idea across. (**How** we show our data on a map will change our message, but that's for a different workshop.)
 
 ## Why QGIS?
 
