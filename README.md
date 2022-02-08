@@ -1,7 +1,7 @@
 # Introducing GIS with the opensource software QGIS
-[image]
+<img src="images/qgis-logo_2019.png" width="150"/>
 
-QGIS is a free and opensource software compatible with mac, PC and Linux systems.
+QGIS is an opensource GIS desktop software compatible with mac, PC and Linux systems.
 
 You can be part of the community at [qgis.org](https://qgis.org/en/site/)!
 
@@ -10,11 +10,17 @@ You can be part of the community at [qgis.org](https://qgis.org/en/site/)!
  - Data - 
 
 ## Workshop Goals
-By the end of this workshop, you will have familiarity with geospatial data, understand the importance of location information and know how to create a map!
+By the end of this workshop, you will be able to:
+- Explain why spatial information can be important
+- Describe vector and raster geospatial data
+- Load data into QGIS
+- Symbolize ...
+- Create a basic map!
 
 ## Workshop Sections
 - [What is GIS?](#what-is-gis)
 - Why QGIS?
+- Data types
 - The QGIS Interface
 - Loading Data
 - Symbology
@@ -40,7 +46,9 @@ For example, we may assume that our friend who lives in the city/county of Denve
 <img src="images/DenverDIA.png" width="700"/>
 </p>
 
-In addition, humans are largely visual. We respond well to seeing information presented in graphs and maps. By using GIS software, we can share our message quickly by *carefully* presenting it in the form of a map. In the above example, we could spend some time explaining that Denver has an odd stretched out boundary to accommodate placing the airport out east or we can just show it to get the idea across. (**How** we show our data on a map will change our message, but that's for a different workshop.)
+In addition, humans are largely visual. We respond well to seeing information presented in graphs and maps. By using GIS software, we can share our message quickly by *carefully* presenting it in the form of a map. In the above example, we could spend some time explaining that Denver has an odd stretched out boundary to accommodate placing the airport out east. Or we can just **show** it to get the idea across. (*How* we show our data on a map will change our message, but that's for a different workshop.)
+
+Take a moment and think about a particular instance in your life or work where spatial information changes how you think about the situation.
 
 ## Why QGIS?
 
@@ -56,3 +64,21 @@ QGIS is an open source, community-driven desktop GIS software that allows users 
 - Native access to open data formats like geoJSON & GeoPackage
 - Comes in more than 40 languages, making it easier to work with a larger variety of colaborators
 - Growing use by local, state, federal, and international governments
+
+## Data Types
+
+Geospatial data can come in many file types and forms. The two main styles of data you'll encounter are vector and raster data.
+
+image image
+
+### Vector Data
+Vector data represents discrete objects in the real world with points, lines, and polygons.
+
+EXAMPLE
+
+Depending on the scale of your map - that is, how much you're zoomed in - one object could have different representations. For example, if a map is of just one farm, the barn might be a rectangular polygon, but if the map is of an entire agricultural valley, the barn might be shown as a single point.
+
+### Raster Data
+Raster data stores information in a grid. It is ideal for 
+
+Digital photos are raster data you are already familiar with. If you zoom in far enough on a digital photo, you'll see that photo is made up of pixels, which appear as colored squares. Pixels are cells in a regular grid and each contains the digital code that corresponds to the color that should be displayed there. Satellite images are a very similar situation.
