@@ -301,7 +301,8 @@ First, we'll use the Select by Value tool to get a count of the number of Norway
 - Open the Select Features by Value dialog by clicking the button with the lined grey and yellow squares: ![select by value icon](images/SelectByValueTool.png)
 - In the box next to SPECIES_CO, type in "Maple, Norway" - it should appear as an option quickly and you can just click on it to fill it in.
 - Click Select Features
-<img src="images/SelectNorwayMaple.png" width="200"/>
+<img src="images/SelectNorwayMaple.png" width="300"/>
+
 - All of the Norway Maple points will turn bright yellow! This is the color QGIS uses to indicated a feature is selected
 - Open the attribute table for the trees
 - In the table, the selected rows will appear in blue, and we can read at the top that there are 4497 Norway Maples
@@ -342,7 +343,7 @@ Now we can select our Ponderosa Pines with the parks layer by using the Select b
 
 
 
-We have a total of 2068 Ponderosa Pines, with 1566 are in parks, so over 75% of these trees are in parks within our AOI!
+We have a total of 2068 Ponderosa Pines, with 1566 are in parks, so over 75% of these trees are in parks within our AOI even though parks are not a majority of the land!
 
 What other questions might you ask about the tree distributions in the main part of Denver? See the information at the end of this workshop to find Denver's full tree inventory dataset and explore further!
 
@@ -356,7 +357,7 @@ We haven't accomplished any cartographic amazingness in this workshop, but let's
 - You'll see a small window that asks you to provide a name for this print composer. Fill it in with a name that makes sense.
 - Next, the print composer window with its own set of tools will appear. The big white area is where you'll build your map.
 - The tools on the left make building the map easy. Start with the top one of these (Add Map) and draw a box for the size you'd like your map data to occupy.
-<img src="images/PrintLayoutTools.png" width="100"/>
+<img src="images/PrintLayoutTools.png" width="30"/>
 
 - Use the other tools for adding a title, a scale bar, a legend and anything else your viewers need to be able to understand your map clearly!
 
@@ -364,6 +365,11 @@ We haven't accomplished any cartographic amazingness in this workshop, but let's
 <img src="images/PrintLayoutGolfCourse.png" width="1000"/>
 </p>
 
+- Under Item Properties for each object you've added to your map, you can adjust details.
+- Save your print composer the same way you save your project. Don't lose your work!
+- When you like what you have, you can go to the Layout menu and pick Export as an image, an .svg or a .pdf.
+
+CONGRATS! You've just performed some spatial analysis and made a map!
 
 ##
 *Data for this workshop was derived from the following sources*:
