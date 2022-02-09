@@ -116,7 +116,7 @@ You can access all of these data files from this [data folder](https://www.dropb
 
 Start QGIS in the way you typically open any program on your particular computer's operating system. It will take a little bit to start.
 
-When QGIS opens, you may see a list of recent projects, or if this is a new installation, there may not be any listed. It doesn't matter which you see, because we want to start a new project. To do this, click on the Project menu in the upper left of the window and select New - or you can click the white page icon that is usually near the Project menu on the tool bar - or you can double click on the "New Project" EPSG:4326 template (we will be using EPSG:4326, but don't worry about what that means).
+When QGIS opens, you may see a list of recent projects, or if this is a new installation, there may not be any listed. It doesn't matter which you see, because we want to start a new project. To do this, click on the Project menu in the upper left of the window and select New - or you can click the white page icon that is usually near the Project menu on the tool bar - or you can double click on the "New Project" EPSG:4326 template (we will be using EPSG:4326, but don't worry about what that means for today).
 
 
 ## QGIS Interface
@@ -209,7 +209,7 @@ Turn the vector layers back on. Use the mouse to zoom in and out. Go to the Navi
 
 Whereas raster data has certain values tied to each grid cell of the raster, vector data has the ability to tie a lot of information to features via an attribute table. Think of this as a spread sheet where each row of the spreadsheet represents one feature in a layer, with each column in that spreadsheet telling us something about that feature or object.
 
-Let's open the attribute table for our trees layer and see what information we can find there! This data is a subset of the total tree inventory dataset provided by the Denver Open Data Catalog.
+Let's open the attribute table for our trees layer and see what information we can find there! (This data is a subset of the total tree inventory dataset provided by the Denver Open Data Catalog.)
 
 - Click on the selecttrees_DenverAOI layer in the layer list to make sure it's highlighted
 - Open the attribute table by clicking the table-looking button in the Attributes Toolbar OR just right click on the layer and select Open Attribute Table
