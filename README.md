@@ -223,3 +223,18 @@ weird stream line going along high elevation
 ## 
 
 ## Making a map
+
+
+*Data for this workshop was derived from the following sources*:
+
+From [Denver Open Data Catalog](https://www.denvergov.org/opendata/)
+- tree inventory
+- street centerlines
+- parks
+
+From [the National Hydrography Dataset](https://www.usgs.gov/national-hydrography/national-hydrography-dataset)
+- water lines
+- water areas
+
+From [USGS National Map 3DEP](https://data.usgs.gov/datacatalog/data/USGS:77ae0551-c61e-4979-aedd-d797abdcde0e)
+- 1 meter DEM
