@@ -262,7 +262,7 @@ We can change the color of the raster as well
 - Access the symbology menu for the .tif file
 - Switch the dropdown from Singleband grey to Singleband pseudocolor
 - Choose a color ramp you like
-- Play around with the classification controls to determine a which elevation the colors change
+- Play around with the classification controls. These change where the elevation changes color on your map, also known as "break points."
 - Click Apply (or OK if you're using the Properties menu)
 
 Your DEM now might look something like this:
