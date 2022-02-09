@@ -14,19 +14,18 @@ By the end of this workshop, you will be able to:
 - Explain why spatial information can be important
 - Describe vector and raster geospatial data
 - Load data into QGIS
-- Symbolize ...
+- Style data layers
 - Create a basic map!
 
 ## Outline
 - [What is GIS?](#what-is-gis)
-- Why QGIS?
-- Data types
-- The QGIS Interface
-- Loading Data
-- Symbolizing Data
-- Exploring Spatial Relationships
-- Adding a Basemap Plugin
-- Making a Print Layout
+- [Why QGIS?](#why-qgis)
+- [Data types](#data-types)
+- [The QGIS Interface](#qgis-interface)
+- [Loading Data](#loading-data)
+- [Styling Data](#styling-data)
+- [Exploring Spatial Relationships](#investigating-spatial-relationships)
+- [Making a Print Layout](#making-a-map)
 
 
 ## What is GIS?
@@ -144,8 +143,8 @@ Hover over the buttons for tooltips that will help you explore and remember what
 
 For a more in-depth exploration of all of these controls (and for other in-depth lessons!) see the [QGIS training manual](https://docs.qgis.org/3.16/en/docs/training_manual/)
 
-## Import data into QGIS
-Let's load some data!
+## Loading Data
+Let's import some data into QGIS!
 
 ### Raster Data
 Let's start by loading the raster data:
@@ -273,9 +272,9 @@ Your DEM now might look something like this:
 </p>
 
 
-## Investigating Spatial Relationships - Working with Vector Data
+## Investigating Spatial Relationships
 
-Now that we've explored our data and stylized it so it makes a little more sense, let's explore some relationships between our data layers.
+Now that we understand what our data is and have stylized it so it makes a little more sense, let's explore some spatial relationships between our data layers.
 
 ### Identifying Features
 
