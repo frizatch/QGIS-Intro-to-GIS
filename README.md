@@ -117,100 +117,154 @@ You can access all of these data files from this [data folder](https://www.dropb
 
 Start QGIS in the way you typically open any program on your particular computer's operating system. It will take a little bit to start.
 
-When QGIS opens, you may see a list of recent projects, or if this is a new installation, there may not be any listed. It doesn't matter which you see, because we want to start a new project. To do this, click on the Project menu in the upper left of the window and select New - or you can click the white page icon that is usually near the Project menu on the tool bar.
+When QGIS opens, you may see a list of recent projects, or if this is a new installation, there may not be any listed. It doesn't matter which you see, because we want to start a new project. To do this, click on the Project menu in the upper left of the window and select New - or you can click the white page icon that is usually near the Project menu on the tool bar - or you can double click on the "New Project" EPSG:4326 template (we will be using EPSG:4326, but don't worry about what that means).
 
 
 ## QGIS Interface
-Although this software is capable of integrating with code, we'll use the Graphic User Interface or GUI ("gooey").
+Although this software is capable of integrating with code, we'll only use the Graphic User Interface or GUI ("gooey") in this workshop.
 
-Here's what the QGIS GUI looks like with some important areas highlighted (NOTE, yours may look a little different because you can move toolbars and windows around to your liking, including toggling them on/off.):
+Here's what the QGIS GUI looks like with some important areas highlighted: 
 
-[image]
+<p align="center">
+<img src="images/QGISInterface.png" width="500"/>
+</p>
+
+(NOTE, yours may look a little different because you can customize this GUI. You can move toolbars and windows around to your liking, toggling them on/off, and add different capabilities to your version of the software.)
 
 1. Layers List / Browser Panel
 2. Map Canvas
-3. Navigation toolbar - use these for moving around the map canvas
+3. Navigation Toolbar - use these for moving around the map canvas
 4. SAVE project (it's always good to save your work as you go!)
 5. Identify Features (useful for quickly investigating an object)
 6. Open Attribute Table
-7. Open Data Source Manager (AKA adding data)
+7. Selection Toolbar
+8. Open Data Source Manager (AKA adding data)
 
-Hover over the buttons for tooltips that will help you explore and remember what each tool is.
+Hover over the buttons for tooltips that will help you explore and remember what each tool is. Some will be greyed out because they can't work without data present in the project.
 
 For a more in-depth exploration of all of these controls (and for other in-depth lessons!) see the [QGIS training manual](https://docs.qgis.org/3.16/en/docs/training_manual/)
 
 ## Import data into QGIS
-Let's load some data.
+Let's load some data!
 
 ### Raster Data
 Let's start by loading the raster data:
 
 - Click on the Open Data Source Manager button on your toolbar. It looks like three cards (one red, one yellow, and one blue) fanned out. Or, find it on the Layer menu.
 - Click the Raster button (it looks like a checker board) on the left side of the Data Source Manager window.
-- Click on the "..." button in the Source section in the middle of the window. Navigate to where you saved your workshop data and select the DEM_SF.tif file.
+- Click on the "..." button in the Source section in the middle of the window. Navigate to where you saved your workshop data and select the .tif file.
 - Click Open.
-- Some options will appear on the page. We can leave the defaults for this dataset.
-- Finally, click "Add" and you should see a black and white raster image appear in the map canvas below the dialog you're working in. (At this point, if we didn't have our data in the same projection, you might see a Select Transformation dialog pop up.)
+- Finally, click "Add" and you should see a black and white raster image appear in the map canvas below the dialog you're working in as well as see the file appear in the layers list box. (At this point, if we didn't have our data in the same projection as the project (the EPSG thing), you might see a Select Transformation dialog pop up.)
 
 You can leave the Data Source Manager window open so we can add some more data.
 
 ### Vector Data
 
-Shapefiles are a very popular vector data format, so that's what we'll work with today, but geopackage is a good open format alternative (and has the advantage of being just one file).
+Shapefiles are a very popular vector data format, so that's what we'll work with today, but geopackage is a good open format alternative (and has the advantage of being just one file, so it can be easier for file management).
 
 Let's load our shapefile data:
 
 - In the Data Source Manager, click on the Vector tab on the left.
 - In the Source section, click on the "..." and navigate to the folder containing your vector data.
-- Holding down the Ctrl button on your keyboard while you click, select the StreetCenterlines.shp, SeismicHazardZones.shp, and Shoreline.shp (don't worry about the other files that make up a shapefile - QGIS will know to look for these when you specify the .shp file). Then click Open. If the Select Transformation dialog appears, pick a transformation that fits the data, such as NAD83 to WGS 84 (43).
-- In the Options section, you can leave the default values as they are for this data. Make note of what options are there - the ENCODING section is particularly helpful if your attributes are written in a different character set than the default, UTF-8.
+- Holding down the Ctrl button on your keyboard while you click, select the parks_DenverAOI.zip, selecttrees_DenverAOI.zip, streets_DenverAOI.zip, waterbodies_DenverAOI.zip, & waterlines_DenverAOI  (If you have unzipped the vector files, just click on the .shp files with the same name. Don't worry about the other files that make up a shapefile - QGIS will know to look for these when you specify the .shp file!) Then click Open. Again, this is a time when the Select Transformation dialog would appear if you try adding data with a different projection. If you do add other data that isn't EPSG:4326, select an appropriate transformation that converts your layer to that projection.
 - In the Data Source Manager click Add.
+- Click Close in the dialog box
 
-DenverAOI - *A boundary defining our "area of interest." This is a reference file only that was used for "clipping" the other data to our area.*
+You don't need the DenverAOI file, but you can add it to your project if you'd like. It is merely a boundary defining our "area of interest" I used for "clipping" the other data to our area.
 
 ## Saving Project Files
-Now that we've added data to our project, let's save it so we can come back to it later.
+Now that we've added data to our project, let's save it so you can come back to it! It's always good to periodically make sure work you've done in your project is saved.
 
 - Click on the blue floppy disk icon (or from the File menu, select Save).
 - Navigate to where you want to save your project file.
-- In the File Name box, type the name you would like your file to have (this will end in .qgs or qgz). Give it a descriptive name so you'll remember what the file was for.
-- Click Save.
+- In the File Name box, type the name you would like your file to have. Give it a descriptive name so you'll remember what the file was for.
+- Click Save and you'll have a .qgs or .qgz file appear in the folder you picked.
 
 ## Exploring Data
-Always the first thing to do when working with data is to see what it actually IS! With geopspatial data, there are a few ways to look deeper into the information in a data layer.
+The first thing to always do when working with data is to see what it actually IS! With geopspatial data, there are a few ways to look deeper into the information in a data layer.
 
 ### Visual Check
-The first thing we'll do is visually inspect the map area to see what our layers look like.
+The first thing we'll do is visually inspect our layers in the map canvas to see what our layers look like...
 
-Layer visiblity
+Layer visiblity:
 
-click them on and off
-drag them up and down in the layers list to change the drawing order
-see max and min of raster layer
+Notice the check marks at the front of each layer in the layer list. You can click them on and off and get look at individual layers.
 
-Navigating around
+Layers stack on top of each other and sometimes hide the ones lower down. You can drag them up and down in the layers list to change the drawing order! Often you'll want to put items in this general order from bottom to top, but it always depends on what you want to do with your data: raster < polygon < line < point. Give it a go!
 
-Use the mouse to zoom in and out. Go to the Navigation toolbar and click the white hand and use it to pan around. The tool with the magnifying glass and back arrow will take you back to the last view you had. Play around and get comfortable moving around in the map canvas.
+Turn all the layers off except for the DEM (Digital Elevation Model) .tif file. Notice the numbers in the layers list under the .tif file - these are the min and max elevation values in meters of the area we're looking at. Black things are lower and white things are higher. Can you see the football stadium?!
 
-*HINT*: If you right click on a layer in the layers list, you'll see a menu that says, "Zoom to Layer" at the top. This is a great way to find your way back to a view on the map canvas if you happen to get lost. Also, this right-click menu is an alternative way to access tools!
+Navigating around:
+
+Turn the vector layers back on. Use the mouse to zoom in and out. Go to the Navigation Toolbar and click the white hand and use it to pan around. The tool with the magnifying glass & back arrow will take you back to the last view you had. Play around and get comfortable moving around in the map canvas.
+
+*HINT*: If you right click on a layer in the layers list, you'll see a menu of options that has, "Zoom to Layer" at the top. This is a great way to find your way back to home base on the map canvas if you happen to get lost. Also, this right-click menu is an alternative way to access tools!
 
 ### Examine the Attributes
 
 Whereas raster data has certain values tied to each grid cell of the raster, vector data has the ability to tie a lot of information to features via an attribute table. Think of this as a spread sheet where each row of the spreadsheet represents one feature in a layer, with each column in that spreadsheet telling us something about that feature or object.
 
-Let's open the attribute table for our trees layer and see what information we can find there!
+Let's open the attribute table for our trees layer and see what information we can find there! This data is a subset of the total tree inventory dataset provided by the Denver Open Data Catalog.
 
 - Click on the selecttrees_DenverAOI layer in the layer list to make sure it's highlighted
-- Open the attribute table by clicking the table-looking button in the Attributes Toolbar OR right click on the layer and select Open attribute table
+- Open the attribute table by clicking the table-looking button in the Attributes Toolbar OR just right click on the layer and select Open Attribute Table
 - A new window will pop up with columns describing characterics of the trees
-- Notice the Column headers or Field names - all this information gives us power to do more with the data
+- At the top, you'll see a count of how many features are in this one layer (still over 10,000 trees even though it's just select trees)
+- Notice the column headers or "field names" - all this information gives us power to do more with the data!
 - The field SPECIES_CO stands for species common name. We'll use this in the next section!
 
 ## Symbolizing Data
 
-When we pull our data in, QGIS will give our vector data random single colors and our raster data a default black and white "stretched band." We have the ability to change these colors as we'd like and change the symbolization of our data in other ways.
+When we pull our data in, QGIS will give our vector data random single colors and our raster data a default black and white "stretched band." We have the ability to change these colors as we'd like. We can also change the symbols for the vector data.
 
-Let's start by by making sure our rivers, streams, etc. are blue:
+Let's start by switching our rivers, streams, etc. to blue if they aren't already:
+
+- Right click on the waterlines_DenverAOI layer
+- Select Properties at the bottom
+- A new dialog box will appear with different menu options on the left side
+- Select Symbology
+- Leave the default Single Symbol selected at the top
+- From the Color bar, use the dropdown arrow to open the color picker and select a blue you like
+- Notice the Opacity and Width options - you may want to make your streams thicker
+- There are even MORE options available if you click on the text at the top that says "Simple Line"!
+- Click OK (if you're not sure how something will look, you can click Apply and keep the dialog box open in case you want to make another change)
+
+<p align="center">
+<img src="images/SymStreamBlue.png" width="300"/>
+</p>
+
+You now have blue streams and rivers!
+
+Feel free to change the color of the streets, parks and water bodies as well, but let's do something different with the trees...
+
+- Right click on the selecttrees_DenverAOI layer
+- Select Properties
+- Pick Symbology on the left if it isn't already selected
+- This time, change the default Single Symbol choice to Categorized from the dropdown menu
+- In the Value box, select SPECIES_CO from the dropdown of all the fields. We're going to use the tree species to control the color of the symbol!
+- Click Classify down in the lower left. You should see five different tree species appear in a list (these are our select trees).
+- Click OK
+
+<p align="center">
+<img src="images/CategorizedTrees.png" width="300"/>
+</p>
+
+
+*HINT*: Another way to have the Symbology menu at your fingertips is to add the Layer Styling panel to your GUI. Go to the main grey menu at the top: View > Panels > Layer Styling. Opening this panel is good if you'll be changing a lot of layers at once. You only have to change the dropdown menu at the top to the layer you're working with.
+
+We can change the color of the raster as well
+
+- Access the symbology menu for the .tif file
+- Switch the dropdown from Singleband grey to Singleband pseudocolor
+- Choose a color ramp you like
+- Play around with the classification controls to determine a which elevation the colors change
+- Click Apply (or OK if you're using the Properties menu)
+
+Your DEM now might look something like this:
+
+<p align="center">
+<img src="images/RasterSymbolizing.png" width="300"/>
+</p>
 
 
 ## Investigating Relationships
