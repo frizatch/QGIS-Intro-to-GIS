@@ -283,7 +283,7 @@ Turn off all of the layers except for the DEM and the water courses.
 
 Do you notice anything strange about some of the lines? Many of them follow what look like lower elevation stream channels. However, one in the northwest actually seems to be following the height of land! The line on the east in the middle certainly seems man made. What are these?
 
-We can quickly check on individual features like this with the Identify Features tool: ![icon for information](image/IdentifyTool.png) Select this tool from the toolbar area, make sure waterlines_DenverAOI is highlighted in the layers list, then click on the lines directly in the map canvas area. The attributes associated with that individual feature will pop up.
+We can quickly check on individual features like this with the Identify Features tool: ![icon for information](images/IdentifyTool.png) Select this tool from the toolbar area, make sure waterlines_DenverAOI is highlighted in the layers list, then click on the lines directly in the map canvas area. The attributes associated with that individual feature will pop up.
 
 You'll discover the line in the northwest is made up of multiple linear features that are all part of the Rocky Mountain Ditch - an irrigation structure. And the main flow path through our AOI is indeed the South Platte River!
 
@@ -298,7 +298,7 @@ One interesting pattern is the east/west difference in the Norway Maples. Let's 
 First, we'll use the Select by Value tool to get a count of the number of Norway Maples in our data set.
 
 - Make sure the selecttrees_DenverAOI layer is highlighted
-- Open the Select Features by Value dialog by clicking the button with the lined grey and yellow squares: ![select by value icon](image/SelectByValueTool.png)
+- Open the Select Features by Value dialog by clicking the button with the lined grey and yellow squares: ![select by value icon](images/SelectByValueTool.png)
 - In the box next to SPECIES_CO, type in "Maple, Norway" - it should appear as an option quickly and you can just click on it to fill it in.
 - Click Select Features
 <img src="images/SelectNorwayMaple.png" width="200"/>
@@ -308,21 +308,43 @@ First, we'll use the Select by Value tool to get a count of the number of Norway
 
 Now, let's just select the Norway Maples on the east side of Broadway - this is the street that creates a pretty stark separation of Norway Maple plantings. Because it's such a straight line, we can easily use our manual selection tool for this!
 
-- Get ride of our last selection by hitting the Deselect tool: ![deselect icon](images/DeselectTool.png)
+- Get ride of our last selection by hitting the Deselect tool: ![deselect icon](images/ClearSelectionTool.png)
 - Make sure the trees layer is highlighted
-- Choose the manual selection tool: ![arrow select icon](images/ManualSelectionTool.png). The dropdown arrow next to it gives you different shapes for manually selecting features.
+- Choose the manual selection tool: ![arrow select icon](images/ManualSelectTool.png). The dropdown arrow next to it gives you different shapes for manually selecting features.
 - Draw a box around our Norway Maples on the east by click-hold-drag until a rectangle is covering all the trees on the east.
 - When you release the mouse, you should see a yellow highlight pattern like this:
-<img src="images/EastNorwayMaples.png" width="500"/>
+<img src="images/EastNorwayMaples.png" width="400"/>
+
 - Open the attribute table for the trees layer again.
 - You'll see that 3014, or about two thirds of our Norway Maples are east of Broadway!
 
+We can also select our trees using another layer of data. This is where the real power of GIS starts coming in! There seems to be a different kind of pattern with our Ponderosa Pines in contrast to the Norway Maples. Let's investigate the relationship of these evergreens to parks.
+
+First we're going to place a *query* on our trees layer so we're only working with the Ponderosa Pines.
+
+- Right click on the trees layer
+- Select Properties
+- This time, pick Source on the left menu
+- You'll see an option for a Query Builder in the lower right - click on it (the image here already has the query completed)
+<img src="images/SourceQueryBuilder.png" width="400"/>
+
+- The query builder has a clickable interface that lets you build it with the right syntax. Double click the fields and options to add them, and single click the operatiors. Or you can just type in exactly what you see in the image.
+<img src="images/PonderosaQuery.png" width="400"/>
+
+Now we can select our Ponderosa Pines with the parks layer by using the Select by Location tool...
+
+- Click on the Select by Location tool: ![select by locatin icon](images/SelectByLocationTool.png)
+- In the first layer choice, we'll pick our trees layer because that what's we want to select
+- The second layer choice will be our parks because that's what we're using to DO the selecting.
+- Notice the different options for comparing the two layers. We'll use the simple intersect option.
+<img src="images/SelectByParks.png" width="400"/>
 
 
 
-Ponderosas within a distance of water
-blue spruce intesecting with parks
-weird stream line going along high elevation
+
+We have a total of 2068 Ponderosa Pines, with 1566 are in parks, so over 75% of these trees are in parks within our AOI!
+
+What other questions might you ask about the tree distributions in the main part of Denver? See the information at the end of this workshop to find Denver's full tree inventory dataset and explore further!
 
 
 ## 
