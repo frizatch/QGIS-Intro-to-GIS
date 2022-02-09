@@ -326,18 +326,18 @@ First we're going to place a *query* on our trees layer so we're only working wi
 - Select Properties
 - This time, pick Source on the left menu
 - You'll see an option for a Query Builder in the lower right - click on it (the image here already has the query completed)
-<img src="images/SourceQueryBuilder.png" width="400"/>
+<img src="images/SourceQueryBuilder.png" width="500"/>
 
 - The query builder has a clickable interface that lets you build it with the right syntax. Double click the fields and options to add them, and single click the operatiors. Or you can just type in exactly what you see in the image.
-<img src="images/PonderosaQuery.png" width="400"/>
+<img src="images/PonderosaQuery.png" width="500"/>
 
 Now we can select our Ponderosa Pines with the parks layer by using the Select by Location tool...
 
-- Click on the Select by Location tool: ![select by locatin icon](images/SelectByLocationTool.png)
+- Click on the Select by Location tool: ![select by location icon](images/SelectByLocation.png)
 - In the first layer choice, we'll pick our trees layer because that what's we want to select
 - The second layer choice will be our parks because that's what we're using to DO the selecting.
 - Notice the different options for comparing the two layers. We'll use the simple intersect option.
-<img src="images/SelectByParks.png" width="400"/>
+<img src="images/SelectByParks.png" width="500"/>
 
 
 
@@ -347,11 +347,25 @@ We have a total of 2068 Ponderosa Pines, with 1566 are in parks, so over 75% of 
 What other questions might you ask about the tree distributions in the main part of Denver? See the information at the end of this workshop to find Denver's full tree inventory dataset and explore further!
 
 
-## 
-
 ## Making a map
 
+We haven't accomplished any cartographic amazingness in this workshop, but let's practice making a quick printable map.
 
+- Pick an area of the map you find interesting. It could be the whole AOI, or you could zoom into a park.
+- On the main menu under Project, go down to New Print Layout... and click it
+- You'll see a small window that asks you to provide a name for this print composer. Fill it in with a name that makes sense.
+- Next, the print composer window with its own set of tools will appear. The big white area is where you'll build your map.
+- The tools on the left make building the map easy. Start with the top one of these (Add Map) and draw a box for the size you'd like your map data to occupy.
+<img src="images/PrintLayoutTools.png" width="100"/>
+
+- Use the other tools for adding a title, a scale bar, a legend and anything else your viewers need to be able to understand your map clearly!
+
+<p align="center">
+<img src="images/PrintLayoutGolfCourse.png" width="1000"/>
+</p>
+
+
+##
 *Data for this workshop was derived from the following sources*:
 
 From [Denver Open Data Catalog](https://www.denvergov.org/opendata/)
