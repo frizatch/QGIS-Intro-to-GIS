@@ -355,7 +355,7 @@ We haven't accomplished any cartographic amazingness in this workshop, but let's
 - On the main menu under Project, go down to New Print Layout... and click it
 - You'll see a small window that asks you to provide a name for this print composer. Fill it in with a name that makes sense.
 - Next, the print composer window with its own set of tools will appear. The big white area is where you'll build your map.
-- The tools on the left make building the map easy. Start with the top one of these (Add Map) and draw a box for the size you'd like your map data to occupy.
+- The tools on the left make building the map easy. Start with the top one of these shown in the next figure (Add Map) and draw a box for the size you'd like your map data to occupy.
 <img src="images/PrintLayoutTools.png" width="30"/>
 
 - Use the other tools for adding a title, a scale bar, a legend and anything else your viewers need to be able to understand your map clearly!
