@@ -7,7 +7,7 @@ You can be part of the community at [qgis.org](https://qgis.org/en/site/)!
 
 ## Workshop Resources
  - Software - access via the [QGIS download page](https://qgis.org/en/site/forusers/download.html)
- - Data - 
+ - Data - download from this dropbox [QGIS workshop data folder](https://www.dropbox.com/sh/3hxsx7vkv5mwy5e/AAAZWoctDaXnHgpebMdlBO62a?dl=0)
 
 ## Workshop Goals
 By the end of this workshop, you will be able to:
@@ -17,7 +17,7 @@ By the end of this workshop, you will be able to:
 - Symbolize ...
 - Create a basic map!
 
-## Workshop Sections
+## Outline
 - [What is GIS?](#what-is-gis)
 - Why QGIS?
 - Data types
@@ -95,21 +95,23 @@ Digital photos are raster data you are already familiar with. If you zoom in far
 Here is a list of data that are used in this workshop:
 
 Vector Shapefiles:
-- Area of Interest Boundary
-- Denver Tree Inventory
-- Water courses
-- Water bodies
-- Streets
-- Parks
+
+| Layer | Filename |
+| ----- | -------- |
+| Area of Interest Boundary | DenverAOI.zip|
+| Denver Tree Inventory | selecttrees_DenverAOI.zip |
+| Water courses | waterlines_DenverAOI.zip |
+| Water bodies | waterbodies_DenverAOI.zip |
+| Streets | streets_DenverAOI.zip |
+| Parks | parks_DenverAOI.zip |
 
 Raster GeoTIFF:
-- Digital Elevation Model (DEM) of Denver
 
+| Layer | Filename |
+| ----- | -------- |
+| Digital Elevation Model (DEM) of Denver | USGS1mDEM_2013_DenverAOI_EPSG4326.tif |
 
-- DenverAOI - *A boundary defining our "area of interest." This is a reference file only that was used for "clipping" the other data to our area.*
-- streetlines_DenverAOI - *Street centerlines*
-
-You can access all of these data files from this [datafolder](link)
+You can access all of these data files from this [data folder](https://www.dropbox.com/sh/3hxsx7vkv5mwy5e/AAAZWoctDaXnHgpebMdlBO62a?dl=0) (Same as the top of this workshop)
 
 ## Start QGIS & Open a New Project
 
@@ -126,15 +128,16 @@ Here's what the QGIS GUI looks like with some important areas highlighted (NOTE,
 [image]
 
 1. Layers List / Browser Panel
-2. Navigation toolbar - use these for moving around the map canvas
-3. SAVE project (it's always good to save your work as you go!)
-4. Identify Features (useful for quickly investigating an object)
-5. Open Data Source Manager (AKA adding data)
+2. Map Canvas
+3. Navigation toolbar - use these for moving around the map canvas
+4. SAVE project (it's always good to save your work as you go!)
+5. Identify Features (useful for quickly investigating an object)
+6. Open Attribute Table
+7. Open Data Source Manager (AKA adding data)
 
-Hover over the buttons for tooltips that will help you remember what they are.
+Hover over the buttons for tooltips that will help you explore and remember what each tool is.
 
-
-For a more in-depth exploration of all of these controls (and for other in-depth lessons) see the [QGIS training manual](https://docs.qgis.org/3.16/en/docs/training_manual/)
+For a more in-depth exploration of all of these controls (and for other in-depth lessons!) see the [QGIS training manual](https://docs.qgis.org/3.16/en/docs/training_manual/)
 
 ## Import data into QGIS
 Let's load some data.
@@ -148,18 +151,22 @@ Let's start by loading the raster data:
 - Click Open.
 - Some options will appear on the page. We can leave the defaults for this dataset.
 - Finally, click "Add" and you should see a black and white raster image appear in the map canvas below the dialog you're working in. (At this point, if we didn't have our data in the same projection, you might see a Select Transformation dialog pop up.)
-- 
+
 You can leave the Data Source Manager window open so we can add some more data.
 
 ### Vector Data
-Shapefiles
-Shapefiles are a very popular vector data format, so that's what we'll work with today, but geopackage is a good open format alternative (and has the advantage of being just one file). Let's load our shapefile data:
 
-In the Data Source Manager, click on the Vector tab on the left.
-In the Source section, click on the "..." and navigate to the folder containing your vector data.
-Holding down the Ctrl button on your keyboard while you click, select the StreetCenterlines.shp, SeismicHazardZones.shp, and Shoreline.shp (don't worry about the other files that make up a shapefile - QGIS will know to look for these when you specify the .shp file). Then click Open. If the Select Transformation dialog appears, pick a transformation that fits the data, such as NAD83 to WGS 84 (43).
-In the Options section, you can leave the default values as they are for this data. Make note of what options are there - the ENCODING section is particularly helpful if your attributes are written in a different character set than the default, UTF-8.
-In the Data Source Manager click Add.
+Shapefiles are a very popular vector data format, so that's what we'll work with today, but geopackage is a good open format alternative (and has the advantage of being just one file).
+
+Let's load our shapefile data:
+
+- In the Data Source Manager, click on the Vector tab on the left.
+- In the Source section, click on the "..." and navigate to the folder containing your vector data.
+- Holding down the Ctrl button on your keyboard while you click, select the StreetCenterlines.shp, SeismicHazardZones.shp, and Shoreline.shp (don't worry about the other files that make up a shapefile - QGIS will know to look for these when you specify the .shp file). Then click Open. If the Select Transformation dialog appears, pick a transformation that fits the data, such as NAD83 to WGS 84 (43).
+- In the Options section, you can leave the default values as they are for this data. Make note of what options are there - the ENCODING section is particularly helpful if your attributes are written in a different character set than the default, UTF-8.
+- In the Data Source Manager click Add.
+
+DenverAOI - *A boundary defining our "area of interest." This is a reference file only that was used for "clipping" the other data to our area.*
 
 ## Saving Project Files
 Now that we've added data to our project, let's save it so we can come back to it later.
