@@ -126,7 +126,7 @@ Although this software is capable of integrating with code, we'll only use the G
 Here's what the QGIS GUI looks like with some important areas highlighted: 
 
 <p align="center">
-<img src="images/QGISInterface.png" width="500"/>
+<img src="images/QGISInterface.png" width="1000"/>
 </p>
 
 (NOTE, yours may look a little different because you can customize this GUI. You can move toolbars and windows around to your liking, toggling them on/off, and add different capabilities to your version of the software.)
@@ -230,7 +230,7 @@ Let's start by switching our rivers, streams, etc. to blue if they aren't alread
 - Click OK (if you're not sure how something will look, you can click Apply and keep the dialog box open in case you want to make another change)
 
 <p align="center">
-<img src="images/SymStreamBlue.png" width="300"/>
+<img src="images/SymStreamBlue.png" width="500"/>
 </p>
 
 You now have blue streams and rivers!
@@ -246,7 +246,7 @@ Feel free to change the color of the streets, parks and water bodies as well, bu
 - Click OK
 
 <p align="center">
-<img src="images/CategorizedTrees.png" width="300"/>
+<img src="images/CategorizedTrees.png" width="500"/>
 </p>
 
 
@@ -263,7 +263,7 @@ We can change the color of the raster as well
 Your DEM now might look something like this:
 
 <p align="center">
-<img src="images/RasterSymbolizing.png" width="300"/>
+<img src="images/RasterSymbolizing.png" width="1000"/>
 </p>
 
 
