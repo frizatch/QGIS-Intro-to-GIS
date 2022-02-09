@@ -186,11 +186,11 @@ The first thing to always do when working with data is to see what it actually I
 ### Visual Check
 The first thing we'll do is visually inspect our layers in the map canvas to see what our layers look like...
 
-Layer visiblity:
+**Layer visiblity**:
 
-Notice the check marks at the front of each layer in the layer list. You can click them on and off and get look at individual layers.
+Notice the check marks at the front of each layer in the layer list. You can click them on and off and get a look at individual layers.
 
-Layers stack on top of each other and sometimes hide the ones lower down. You can drag them up and down in the layers list to change the drawing order! Often you'll want to put items in this general order from bottom to top, but it always depends on what you want to do with your data: raster < polygon < line < point. Give it a go!
+Layers stack on top of each other and sometimes hide the ones lower down. You can drag them up and down in the layers list to change the drawing order. Often you'll want to put items in this general order from bottom to top, but it always depends on what you want to do with your data: raster < polygon < line < point. Give it a go!
 
 You'll have something of a mess that looks like this:
 
@@ -200,7 +200,7 @@ You'll have something of a mess that looks like this:
 
 Turn all the layers off except for the DEM (Digital Elevation Model) .tif file. Notice the numbers in the layers list under the .tif file - these are the min and max elevation values in meters of the area we're looking at. Black things are lower and white things are higher. Can you see the football stadium?!
 
-Navigating around:
+**Navigating around**:
 
 Turn the vector layers back on. Use the mouse to zoom in and out. Go to the Navigation Toolbar and click the white hand and use it to pan around. The tool with the magnifying glass & back arrow will take you back to the last view you had. Play around and get comfortable moving around in the map canvas.
 
@@ -219,7 +219,7 @@ Let's open the attribute table for our trees layer and see what information we c
 - Notice the column headers or "field names" - all this information gives us power to do more with the data!
 - The field SPECIES_CO stands for species common name. We'll use this in the next section!
 
-## Symbolizing Data
+## Styling Data
 
 When we pull our data in, QGIS will give our vector data random single colors and our raster data a default black and white "stretched band." We have the ability to change these colors as we'd like. We can also change the symbols for the vector data.
 
@@ -273,9 +273,52 @@ Your DEM now might look something like this:
 </p>
 
 
-## Investigating Relationships - Working with Vector Data
+## Investigating Spatial Relationships - Working with Vector Data
 
-Now that
+Now that we've explored our data and stylized it so it makes a little more sense, let's explore some relationships between our data layers.
+
+### Identifying Features
+
+Turn off all of the layers except for the DEM and the water courses.
+
+Do you notice anything strange about some of the lines? Many of them follow what look like lower elevation stream channels. However, one in the northwest actually seems to be following the height of land! The line on the east in the middle certainly seems man made. What are these?
+
+We can quickly check on individual features like this with the Identify Features tool: ![icon for information](image/IdentifyTool.png) Select this tool from the toolbar area, make sure waterlines_DenverAOI is highlighted in the layers list, then click on the lines directly in the map canvas area. The attributes associated with that individual feature will pop up.
+
+You'll discover the line in the northwest is made up of multiple linear features that are all part of the Rocky Mountain Ditch - an irrigation structure. And the main flow path through our AOI is indeed the South Platte River!
+
+### Selecting Features
+
+Now let's turn on our other vector layers and explore the distribution of the trees. You can turn off the DEM if you'd like.
+
+We have five different species of trees in our dataset, and thanks to our categorized symbolization, we can look at each species individually. Click them on and off in the layers list and see if you see any patterns you'd like to investigate more. What questions did this visual inspection raise?
+
+One interesting pattern is the east/west difference in the Norway Maples. Let's dig in to test what the numbers actually say...
+
+First, we'll use the Select by Value tool to get a count of the number of Norway Maples in our data set.
+
+- Make sure the selecttrees_DenverAOI layer is highlighted
+- Open the Select Features by Value dialog by clicking the button with the lined grey and yellow squares: ![select by value icon](image/SelectByValueTool.png)
+- In the box next to SPECIES_CO, type in "Maple, Norway" - it should appear as an option quickly and you can just click on it to fill it in.
+- Click Select Features
+<img src="images/SelectNorwayMaple.png" width="200"/>
+- All of the Norway Maple points will turn bright yellow! This is the color QGIS uses to indicated a feature is selected
+- Open the attribute table for the trees
+- In the table, the selected rows will appear in blue, and we can read at the top that there are 4497 Norway Maples
+
+Now, let's just select the Norway Maples on the east side of Broadway - this is the street that creates a pretty stark separation of Norway Maple plantings. Because it's such a straight line, we can easily use our manual selection tool for this!
+
+- Get ride of our last selection by hitting the Deselect tool: ![deselect icon](images/DeselectTool.png)
+- Make sure the trees layer is highlighted
+- Choose the manual selection tool: ![arrow select icon](images/ManualSelectionTool.png). The dropdown arrow next to it gives you different shapes for manually selecting features.
+- Draw a box around our Norway Maples on the east by click-hold-drag until a rectangle is covering all the trees on the east.
+- When you release the mouse, you should see a yellow highlight pattern like this:
+<img src="images/EastNorwayMaples.png" width="500"/>
+- Open the attribute table for the trees layer again.
+- You'll see that 3014, or about two thirds of our Norway Maples are east of Broadway!
+
+
+
 
 Ponderosas within a distance of water
 blue spruce intesecting with parks
