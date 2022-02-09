@@ -192,6 +192,12 @@ Notice the check marks at the front of each layer in the layer list. You can cli
 
 Layers stack on top of each other and sometimes hide the ones lower down. You can drag them up and down in the layers list to change the drawing order! Often you'll want to put items in this general order from bottom to top, but it always depends on what you want to do with your data: raster < polygon < line < point. Give it a go!
 
+You'll have something of a mess that looks like this:
+
+<p align="center">
+<img src="images/LoadedData.png" width="1000"/>
+</p>
+
 Turn all the layers off except for the DEM (Digital Elevation Model) .tif file. Notice the numbers in the layers list under the .tif file - these are the min and max elevation values in meters of the area we're looking at. Black things are lower and white things are higher. Can you see the football stadium?!
 
 Navigating around:
@@ -250,7 +256,7 @@ Feel free to change the color of the streets, parks and water bodies as well, bu
 </p>
 
 
-*HINT*: Another way to have the Symbology menu at your fingertips is to add the Layer Styling panel to your GUI. Go to the main grey menu at the top: View > Panels > Layer Styling. Opening this panel is good if you'll be changing a lot of layers at once. You only have to change the dropdown menu at the top to the layer you're working with.
+*HINT*: Another way to have the Symbology menu at your fingertips is to add the Layer Styling panel to your GUI. Go to the main grey menu at the top: View > Panels > Layer Styling. Then make sure the paintbrush symbology icon is selected at the left. Opening this panel is good if you'll be changing a lot of layers at once. You only have to change the dropdown menu at the top to the layer you're working with.
 
 We can change the color of the raster as well
 
@@ -267,7 +273,9 @@ Your DEM now might look something like this:
 </p>
 
 
-## Investigating Relationships
+## Investigating Relationships - Working with Vector Data
+
+Now that
 
 Ponderosas within a distance of water
 blue spruce intesecting with parks
