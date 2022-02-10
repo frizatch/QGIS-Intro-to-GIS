@@ -24,11 +24,11 @@ By the end of this workshop, you will be able to:
 - [The QGIS Interface](#qgis-interface)
 - [Loading Data](#loading-data)
 - [Styling Data](#styling-data)
-- [Exploring Spatial Relationships](#investigating-spatial-relationships)
+- [Exploring Spatial Relationships](#spatial-relationships)
 - [Making a Print Layout](#making-a-map)
 
 
-## What is GIS?
+## <a name="what-is-gis"></a>  What is GIS?
 And more importantly, why might we want to use it?
 
 GIS stands for either Geographic Information System or Geographic Information Science.
@@ -49,7 +49,7 @@ In addition, humans are largely visual. We respond well to seeing information pr
 
 Take a moment and think about a particular instance in your life or work where spatial information changes how you think about the situation.
 
-## Why QGIS?
+## <a name="why-qgis"></a> Why QGIS?
 
 QGIS is an open source, community-driven desktop GIS software that allows users to visualize and analyze spatial data in a variety of ways. There are many reasons to use QGIS, but here are a few:
 
@@ -64,7 +64,7 @@ QGIS is an open source, community-driven desktop GIS software that allows users 
 - Comes in more than 40 languages, making it easier to work with a larger variety of colaborators
 - Growing use by local, state, federal, and international governments
 
-## Data Types
+## <a name="data-types"></a>   Data Types
 
 Geospatial data can come in many file types and forms. The two main styles of data you'll encounter are vector and raster data.
 
@@ -119,7 +119,7 @@ Start QGIS in the way you typically open any program on your particular computer
 When QGIS opens, you may see a list of recent projects, or if this is a new installation, there may not be any listed. It doesn't matter which you see, because we want to start a new project. To do this, click on the Project menu in the upper left of the window and select New - or you can click the white page icon that is usually near the Project menu on the tool bar - or you can double click on the "New Project" EPSG:4326 template (we will be using EPSG:4326, but don't worry about what that means for today).
 
 
-## QGIS Interface
+## <a name="qgis-interface"></a>  QGIS Interface
 Although this software is capable of integrating with code, we'll only use the Graphic User Interface or GUI ("gooey") in this workshop.
 
 Here's what the QGIS GUI looks like with some important areas highlighted: 
@@ -143,7 +143,7 @@ Hover over the buttons for tooltips that will help you explore and remember what
 
 For a more in-depth exploration of all of these controls (and for other in-depth lessons!) see the [QGIS training manual](https://docs.qgis.org/3.16/en/docs/training_manual/)
 
-## Loading Data
+## <a name="loading-data"></a>  Loading Data
 Let's import some data into QGIS!
 
 ### Raster Data
@@ -218,7 +218,7 @@ Let's open the attribute table for our trees layer and see what information we c
 - Notice the column headers or "field names" - all this information gives us power to do more with the data!
 - The field SPECIES_CO stands for species common name. We'll use this in the next section!
 
-## Styling Data
+## <a name="styling-data"></a>  Styling Data
 
 When we pull our data in, QGIS will give our vector data random single colors and our raster data a default black and white "stretched band." We have the ability to change these colors as we'd like. We can also change the symbols for the vector data.
 
@@ -272,7 +272,7 @@ Your DEM now might look something like this:
 </p>
 
 
-## Investigating Spatial Relationships
+## <a name="spatial-relationships"></a> Investigating Spatial Relationships
 
 Now that we understand what our data is and have stylized it so it makes a little more sense, let's explore some spatial relationships between our data layers.
 
@@ -347,7 +347,7 @@ We have a total of 2068 Ponderosa Pines, with 1566 are in parks, so over 75% of 
 What other questions might you ask about the tree distributions in the main part of Denver? See the information at the end of this workshop to find Denver's full tree inventory dataset and explore further!
 
 
-## Making a map
+## <a name="making-a-map"></a>  Making a map
 
 We haven't accomplished any cartographic amazingness in this workshop, but let's practice making a quick printable map.
 
