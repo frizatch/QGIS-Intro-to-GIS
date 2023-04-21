@@ -77,7 +77,7 @@ Vector data most commonly represents discrete objects in the real world with poi
 
 If you've ever been without your smartphone and needed to sketch out a map to direct a friend to your house, you were drawing "vector" data. You drew lines for the streets, perhaps you added a rectangle to show a field your friend had to pass, and maybe you made a star to represent your home.
 
-Depending on the scale of your map - that is, how much you're zoomed in - one object could have different representations. For example, if a map is of just one farm, the barn might be a rectangule, but if the map is of an entire agricultural valley, the barn might be shown as a single point.
+Depending on the scale of your map - that is, how much you're zoomed in - one object could have different representations. For example, if a map is of just one farm, the barn might be a rectangle, but if the map is of an entire agricultural valley, the barn might be shown as a single point.
 
 Lines representing a single value (isolines) can also be used to represent continuous data like the elevation contours in the next figure below.
 
