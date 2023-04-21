@@ -308,7 +308,7 @@ First, we'll use the Select by Value tool to get a count of the number of Norway
 
 Now, let's just select the Norway Maples on the east side of Broadway - this is the street that creates a pretty stark separation of Norway Maple plantings. Because it's such a straight line, we can easily use our manual selection tool for this!
 
-- Get ride of our last selection by hitting the Deselect tool: ![deselect icon](images/ClearSelectionTool.png)
+- Get rid of our last selection by hitting the Deselect tool: ![deselect icon](images/ClearSelectionTool.png)
 - Make sure the trees layer is highlighted
 - Choose the manual selection tool: ![arrow select icon](images/ManualSelectTool.png). The dropdown arrow next to it gives you different shapes for manually selecting features.
 - Draw a box around our Norway Maples on the east by click-hold-drag until a rectangle is covering all the trees on the east.
