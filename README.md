@@ -141,7 +141,7 @@ Here's what the QGIS GUI looks like with some important areas highlighted:
 
 Hover over the buttons for tooltips that will help you explore and remember what each tool is. Some will be greyed out because they can't work without data present in the project.
 
-For a more in-depth exploration of all of these controls (and for other in-depth lessons!) see the [QGIS training manual](https://docs.qgis.org/3.16/en/docs/training_manual/)
+For a more in-depth exploration of all of these controls (and for other in-depth lessons!) see the [QGIS training manual](https://docs.qgis.org/3.28/en/docs/training_manual/index.html)
 
 ## <a name="loading-data"></a>  Loading Data
 Let's import some data into QGIS!
