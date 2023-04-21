@@ -305,10 +305,14 @@ First, we'll use the Select by Value tool to get a count of the number of Norway
 - All of the Norway Maple points will turn bright yellow! This is the color QGIS uses to indicated a feature is selected
 - Open the attribute table for the trees
 - In the table, the selected rows will appear in blue, and we can read at the top that there are 4497 Norway Maples
+- You can now clear the selection by hitting the Deselect tool: ![deselect icon](images/ClearSelectionTool.png)
+
+What if we want to work with only the Norway Maple trees on our map? We can use something called a *query* to limit our data to a certain value or values from our attribute table.
+
+(*Scroll down a bit to the "Query Directions" written out for Ponderosa Pines, but instead use the query:*  "SPECIES_CO"='Maple, Norway' )
 
 Now, let's just select the Norway Maples on the east side of Broadway - this is the street that creates a pretty stark separation of Norway Maple plantings. Because it's such a straight line, we can easily use our manual selection tool for this!
 
-- Get rid of our last selection by hitting the Deselect tool: ![deselect icon](images/ClearSelectionTool.png)
 - Make sure the trees layer is highlighted
 - Choose the manual selection tool: ![arrow select icon](images/ManualSelectTool.png). The dropdown arrow next to it gives you different shapes for manually selecting features.
 - Draw a box around our Norway Maples on the east by click-hold-drag until a rectangle is covering all the trees on the east.
@@ -320,7 +324,9 @@ Now, let's just select the Norway Maples on the east side of Broadway - this is 
 
 We can also select our trees using another layer of data. This is where the real power of GIS starts coming in! There seems to be a different kind of pattern with our Ponderosa Pines in contrast to the Norway Maples. Let's investigate the relationship of these evergreens to parks.
 
-First we're going to place a *query* on our trees layer so we're only working with the Ponderosa Pines.
+#### Query Directions
+
+This time we'll place a query on our trees layer so we're only working with the Ponderosa Pines.
 
 - Right click on the trees layer
 - Select Properties
@@ -328,7 +334,7 @@ First we're going to place a *query* on our trees layer so we're only working wi
 - You'll see an option for a Query Builder in the lower right - click on it (the image here already has the query completed)
 <img src="images/SourceQueryBuilder.png" width="500"/>
 
-- The query builder has a clickable interface that lets you build it with the right syntax. Double click the fields and options to add them, and single click the operatiors. Or you can just type in exactly what you see in the image.
+- The query builder has a clickable interface that lets you build it with the right syntax. Double click the fields and options to add them, and single click the operatiors. Or you can just type in exactly what you see in the image: "SPECIES_CO"='Pine, Ponderosa'
 <img src="images/PonderosaQuery.png" width="500"/>
 
 Now we can select our Ponderosa Pines with the parks layer by using the Select by Location tool...
