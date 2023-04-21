@@ -180,7 +180,7 @@ Now that we've added data to our project, let's save it so you can come back to 
 - Click Save and you'll have a .qgs or .qgz file appear in the folder you picked.
 
 ## Exploring Data
-The first thing to always do when working with data is to see what it actually IS! With geopspatial data, there are a few ways to look deeper into the information in a data layer.
+The first thing to always do when working with data is to see what it actually IS! With geospatial data, there are a few ways to look deeper into the information in a data layer.
 
 ### Visual Check
 The first thing we'll do is visually inspect our layers in the map canvas to see what our layers look like...
